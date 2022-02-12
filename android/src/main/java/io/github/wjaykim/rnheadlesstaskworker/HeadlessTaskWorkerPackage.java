@@ -1,4 +1,4 @@
-package com.reactnativeheadlesstaskworker;
+package io.github.wjaykim.rnheadlesstaskworker;
 
 import androidx.annotation.NonNull;
 
@@ -15,9 +15,7 @@ public class HeadlessTaskWorkerPackage implements ReactPackage {
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
-        List<NativeModule> modules = new ArrayList<>();
-        modules.add(new HeadlessTaskWorkerModule(reactContext));
-        return modules;
+        return Collections.emptyList();
     }
 
     @NonNull

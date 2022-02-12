@@ -2,5 +2,5 @@ rootProject.name = 'HeadlessTaskWorkerExample'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
 
-include ':reactnativeheadlesstaskworker'
-project(':reactnativeheadlesstaskworker').projectDir = new File(rootProject.projectDir, '../../android')
+include ':react-native-headless-task-worker'
+project(':react-native-headless-task-worker').projectDir = new File(rootProject.projectDir, '../../android')

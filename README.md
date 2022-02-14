@@ -4,6 +4,8 @@ Run Headless JS task with WorkManager
 
 Headless JS is a way to run tasks in JavaScript while your app is in the background. It can be used, for example, to sync fresh data, handle push notifications, or play music.
 
+## Why not use [existing RN API](https://reactnative.dev/docs/headless-js-android)?
+
 From Android 8.0(API Level 26), the system imposes [limitations on running services in the background][0]. As React Native's stock headless task need to be executed with service, these limitations prevent to execute Headless JS in some cases.
 
 To resolve this issue, this library provide a way to execute Headless JS task with [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager).

@@ -58,7 +58,7 @@ import androidx.work.Data;
 import androidx.work.WorkerParameters;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.jstasks.HeadlessJsTaskConfig;
-import io.wjaykim.rnheadlesstaskworker.HeadlessJsTaskWorker;
+import io.github.wjaykim.rnheadlesstaskworker.HeadlessJsTaskWorker;
 
 public class MyTaskWorker extends HeadlessJsTaskWorker {
     public MyTaskWorker(@NonNull Context context, @NonNull WorkerParameters params) {
@@ -76,7 +76,7 @@ public class MyTaskWorker extends HeadlessJsTaskWorker {
                 false // optional: defines whether or not  the task is allowed in foreground. Default is false
             );
         }
-        return null
+        return null;
     }
 }
 ```
@@ -86,6 +86,13 @@ Now, whenever your work is executed, JS will spin up, run your task, then spin d
 Example:
 
 ```java
+import androidx.work.Data;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
+import java.util.concurrent.TimeUnit;
+...
+
 Data inputData = new Data.Builder()
         .putString("message", "Task has executed")
         .build();
